@@ -2,7 +2,9 @@
 Argocd-vso-example
 ===========
 
-A Helm chart
+A Helm chart for deploying HashiCorp Vault Secrets Operator resources.
+
+![ArgoCD Flow with VSO resources](images/argo.png)
 
 
 ## Configuration

@@ -1,6 +1,6 @@
 vault:
+  address: https://127.0.0.1:8200
   auth:
-    address: https://127.0.0.1:8200
     role: argocd-vso-app
     method: kubernetes
     mount: ocp

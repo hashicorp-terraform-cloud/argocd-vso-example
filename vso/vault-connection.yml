@@ -3,5 +3,5 @@ kind: VaultConnection
 metadata:
   name: hcpvd-connection
 spec:
-  address: ${VAULT_ADDRESS}
+  address: {{ Values.vault.address }}
   skipTLSVerify: false

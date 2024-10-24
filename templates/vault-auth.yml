@@ -1,13 +1,13 @@
 apiVersion: secrets.hashicorp.com/v1beta1
 kind: VaultAuth
 metadata:
-  name: hcpvd-auth
+  name: {{ .Release.Name }}-hcpvd-auth
 spec:
   kubernetes:
     tokenExpirationSeconds: 600
-    role: argocd-vso-app
-    serviceAccount: argocd-vso-app-sa
-  vaultConnectionRef: hcpvd-connection
-  method: kubernetes
-  mount: ocp
-  namespace: admin
+    role: {{ .Values.vault.auhtRole }}
+    serviceAccount: {{ .Release.Name }}-sa
+  vaultConnectionRef: {{ .Release.Name }}-hcpvd-conn
+  method: {{ .Values.vault.auth.method }}
+  mount: {{ .Values.vault.auth.mount }}
+  namespace: {{ .Values.vault.auth.namespace }}

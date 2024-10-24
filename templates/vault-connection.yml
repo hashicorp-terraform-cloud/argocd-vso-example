@@ -1,7 +1,7 @@
 apiVersion: secrets.hashicorp.com/v1beta1
 kind: VaultConnection
 metadata:
-  name: hcpvd-connection
+  name: {{ .Release.Name }}-hcpvd-conn
 spec:
   address: {{ .Values.vault.address }}
   skipTLSVerify: false

@@ -5,7 +5,7 @@ metadata:
 spec:
   kubernetes:
     tokenExpirationSeconds: 600
-    role: {{ .Values.vault.auhtRole }}
+    role: {{ .Values.vault.auth.role }}
     serviceAccount: {{ .Release.Name }}-sa
   vaultConnectionRef: {{ .Release.Name }}-hcpvd-conn
   method: {{ .Values.vault.auth.method }}

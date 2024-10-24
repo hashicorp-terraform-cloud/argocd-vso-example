@@ -3,5 +3,5 @@ kind: VaultConnection
 metadata:
   name: hcpvd-connection
 spec:
-  address: ''
+  address: ${VAULT_ADDRESS}
   skipTLSVerify: false
